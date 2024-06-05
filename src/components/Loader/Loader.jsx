@@ -1,17 +1,19 @@
-import { Puff } from "react-loader-spinner";
-import css from "./Loader.module.css";
 
-export default function Loader() {
-  return (
-    <>
-      <Puff
-        visible={true}
-        height="80"
-        width="80"
-        color="#026049"
-        ariaLabel="puff-loading"
-        wrapperClass={css.loader}
-      />
-    </>
-  );
-}
+import css from "./Loader.module.css";
+import {InfinitySpin} from 'react-loader-spinner'
+
+const Loader = () => {
+    return (
+        <div className={css.loader}>
+        <InfinitySpin
+          visible={true}
+          width="200"
+          color="#4fa94d"
+            ariaLabel="infinity-spin-loading"
+            margin="0 auto"
+          />
+          </div>    
+    );
+};
+
+export default Loader;
