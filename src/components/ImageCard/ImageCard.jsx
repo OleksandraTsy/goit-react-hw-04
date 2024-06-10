@@ -5,8 +5,8 @@ export default function ImageCard({
   openModal,
 }) {
   return (
-    <div onClick={() => openModal(urls.regular, description, user.name)}>
-      <img className={css.img} src={urls.small} alt={description}></img>
+    <div>
+      <img className={css.img} src={urls.small} alt={description} onClick={() => openModal(urls.regular, description, user.name)}></img>
     </div>
   );
 }
